@@ -1,33 +1,7 @@
 from flask import Flask, render_template
+from database import get_jobs_db
 
 app = Flask(__name__)
-
-JOBS = [
-  {
-    'id': 1,
-    'title': 'Software Developer',
-    'location': 'Los Angeles, CA',
-    'salary': '$110,000'
-  },
-  {
-    'id': 2,
-    'title': 'Senior Backend Engineer',
-    'location': 'Los Angeles, CA',
-    'salary': '$180,000'
-  },
-  {
-    'id': 3,
-    'title': 'Frontend Engineer',
-    'location': 'Los Angeles, CA',
-    'salary': '$120,000'
-  },
-  {
-    'id': 4,
-    'title': 'ML Engineer',
-    'location': 'Los Angeles, CA',
-    'salary': '$150,000'
-  },
-]
 
 COMPANY = "Custom"
 
@@ -36,8 +10,9 @@ DESCRIPTION = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 
 @app.route("/")
 def hello_world():
+  jobs = get_jobs_db()
   return render_template('home.html',
-                         jobs=JOBS,
+                         jobs=jobs,
                          company=COMPANY,
                          desc=DESCRIPTION)
 
