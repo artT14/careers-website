@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from database import get_jobs_db
+from database import get_jobs_db, get_job_db
 
 app = Flask(__name__)
 
@@ -9,12 +9,20 @@ DESCRIPTION = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 
 
 @app.route("/")
-def hello_world():
+def home():
   jobs = get_jobs_db()
   return render_template('home.html',
                          jobs=jobs,
                          company=COMPANY,
                          desc=DESCRIPTION)
+
+
+@app.route("/job/<id>")
+def job(id):
+  job_data = get_job_db(id)
+  if not job_data:
+    return render_template('error.html')
+  return render_template('job.html', id=id, job=job_data)
 
 
 if __name__ == "__main__":
