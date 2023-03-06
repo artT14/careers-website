@@ -1,18 +1,12 @@
 {% extends "layout.html" %}
 {% block head %}
-    <title>{{company}} Career's Page</title>
-    <style>
-      #banner{
-        height: 320px;
-        width: 100%;
-        object-fit: cover;
-      }
-    </style>
+    <title>{{company}} Careers</title>
+
 {% endblock %}
 {% block content %}
     <div class="container">
-      <img  class="img-fluid" id="banner" src="./static/banner.jpg" alt="banner image"/>
-      <h2 class="mt-4 text-center">About {{company}}</h2>
+      {% include './components/banner.html'%}
+      <h2 class="mt-4 text-center">{{company}} Careers</h2>
       <div class="row">
         <div class="col-md-6">
           <p class="lead">{{desc}}</p>

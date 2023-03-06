@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from database import get_jobs_db, get_job_db
+import json
 
 app = Flask(__name__)
 
@@ -9,7 +10,7 @@ DESCRIPTION = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 
 
 @app.route("/")
-def home():
+def jobs():
   jobs = get_jobs_db()
   return render_template('home.html',
                          jobs=jobs,
@@ -17,12 +18,26 @@ def home():
                          desc=DESCRIPTION)
 
 
+@app.route("/api/jobs")
+def jobs_api():
+  jobs = get_jobs_db()
+  return json.dumps(jobs)
+
+
 @app.route("/job/<id>")
 def job(id):
   job_data = get_job_db(id)
   if not job_data:
     return render_template('error.html')
-  return render_template('job.html', id=id, job=job_data)
+  return render_template('job.html', company=COMPANY, id=id, job=job_data)
+
+
+@app.route("/api/job/<id>")
+def job_api(id):
+  job_data = get_job_db(id)
+  if not job_data:
+    return json.dumps({})
+  return json.dumps(job_data)
 
 
 if __name__ == "__main__":
