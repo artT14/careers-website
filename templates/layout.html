@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include './components/bootstrap_meta.html'%}
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% include './components/header.html'%}
+    {% block content %}{% endblock %}
+    {% include './components/footer.html' %}
+  </body>
+</html>
