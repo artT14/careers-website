@@ -1,0 +1,38 @@
+[
+    {
+      "currency": "$",
+      "id": 1,
+      "location": "Los Angeles, CA",
+      "requirements": "3+ years experience developing server-side software using C++, Java, Go, or another strongly typed language\nUnderstanding of HTTP and socket programming\nExperience with version control systems (such as SVN or Git)\nExperience building and running software in a Linux environment using the command line interface",
+      "responsibilities": "Work with stakeholders to help facilitate technical solutions to address problems or implement feature requests.\nEnsure that projects are completed on-time and with proper handling of source code via version control.\nRelease updates in highly controlled and supervised methods, as well as establish adequate testing procedures to prevent negative impact to the overall business.\nReview error reports to identify potential problems proactively; suggest new reports and ways to visualize data.\nTrack down and eliminate bugs in both code written by the developer and others.\nThoroughly document processes and policies, as well as conduct insightful post-mortem analysis.",
+      "salary": 110000,
+      "title": "Software Developer"
+    },
+    {
+      "currency": "$",
+      "id": 2,
+      "location": "Los Angeles, CA",
+      "requirements": "Excellent knowledge and experience with a backend language like Java, Node.js, Go, C++\nBS/MS in Computer Science or an equivalent field with 5+ years of industry work experience\nExcellent knowledge of Computer Science fundamentals with strong competencies in data structures, algorithms, and coding\nStrong designing and building distributed backend systems handling high volumes of traffic\nExperience in handling ambiguous business requirements with excellent prioritization, time management abilities, and a focus on execution\nPassion to tackle exciting engineering problems and make continuous improvements",
+      "responsibilities": "Design, develop and operate scalable and resilient distributed services that run on Kubernetes or ECS\nCollaborate with various functional teams across Tinder on the expansion of our service platform\nInfluence the team roadmap and product development\nRecruit, encourage, and develop other team members",
+      "salary": 180000,
+      "title": "Senior Backend Engineer"
+    },
+    {
+      "currency": "$",
+      "id": 3,
+      "location": "Los Angeles, CA",
+      "requirements": "0-2 years of UI development experience\nB.S. in Computer Science or a related degree\nDevelopment experience with HTML5, CSS3, and JavaScript, working on applications with backend microservices and database components\nExperience with JavaScript libraries and frameworks such as React/Redux and/or Angular\nExperience in development of, and/or integration with web services and RESTful APIs",
+      "responsibilities": "Work with the UX designers to understand requirements and build front-end web application components and applications\nBuild web applications written in a variety of technologies (React, Typescript), including building of reusable UI components in a modularized manner\nImplement or integrate authentication and authorization features into the web application following a standard OAuth Flow\nImplement security conscious mid-tier APIs to service the web applications\nUnderstand how to support frontend web applications on various browsers and possible resolutions\nEnsure solid unit and integration test code coverage\nWork with the UX designers to understand requirements and build front-end web application components and applications\nDevelop high-performance JavaScript-based front-end functionality using modern design patterns\nEstablish and adhere to best practices in Design Thinking and User-Centric principles",
+      "salary": 120000,
+      "title": "Frontend Engineer"
+    },
+    {
+      "currency": "$",
+      "id": 4,
+      "location": "Los Angeles, CA",
+      "requirements": "Minimum of 3 years of experience in Python, Scala, or Java\nMinimum of 3 years of building, scaling, and optimizing machine learning systems\nFamiliar with Hybrid Feature Selection and Bayesian Search\nWorks well in a team environment, with talented people both inside of engineering and other teams\nWrite clear, legible, and understandable code\nExperience taking projects from idea through to completion, and iterating to improve them\nIn the US, preferably in the Pacific Time zone\nOnline communication, team collaboration skills, and English proficiency a must",
+      "responsibilities": "Design, build, and deliver Machine Learning models and components to solve real problems\nUse your understanding of Modeling Techniques, data, model training, hyperparameter tuning, and validation, to inform decision making\nCollaborate as part of a cross functional team to solve customer requirements\nRetrain, maintain, and monitor existing models\nLeverage cloud-based tools and technologies to deliver ML models at scale",
+      "salary": 150000,
+      "title": "ML Engineer"
+    }
+  ]
