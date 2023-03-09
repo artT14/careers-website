@@ -1,11 +1,11 @@
 from sqlalchemy import create_engine, text
-import os
 
-connect_string = os.environ['DB_CONNECT']
+# connect_string = os.environ['DB_CONNECT']
 
-connect_args = {"ssl": {"ssl_ca": "/etc/ssl/cert.pem"}}
+# connect_args = {"ssl": {"ssl_ca": "/etc/ssl/cert.pem"}}
 
-engine = create_engine(connect_string, connect_args=connect_args)
+# engine = create_engine(connect_string, connect_args=connect_args)
+engine = create_engine("sqlite:///database/careers.db")
 
 
 def get_jobs_db():
@@ -20,7 +20,7 @@ def get_jobs_db():
 
 def get_job_db(id):
   with engine.connect() as conn:
-    result = conn.execute(text("SELECT * FROM jobs WHERE id = :val"),
+    result = conn.execute(text("SELECT * FROM jobs WHERE job_id = :val"),
                           {'val': id})
     column_names = result.keys()
     jobs = result.all()

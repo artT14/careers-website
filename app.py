@@ -23,27 +23,27 @@ def jobs_api():
   return jsonify(jobs)
 
 
-@app.route("/job/<id>")
-def job(id):
-  job_data = get_job_db(id)
+@app.route("/job/<job_id>")
+def job(job_id):
+  job_data = get_job_db(job_id)
   if not job_data:
     return render_template('error.html')
-  return render_template('job.html', company=COMPANY, id=id, job=job_data)
+  return render_template('job.html', company=COMPANY, id=job_id, job=job_data)
 
 
-@app.route("/api/job/<id>")
-def job_api(id):
-  job_data = get_job_db(id)
+@app.route("/api/job/<job_id>")
+def job_api(job_id):
+  job_data = get_job_db(job_id)
   if not job_data:
     return jsonify({})
   return jsonify(job_data)
 
 
-@app.route("/job/<id>/apply", methods=['post'])
-def job_apply(id):
+@app.route("/job/<job_id>/apply", methods=['post'])
+def job_apply(job_id):
   app_data = request.form
-  post_job_db(id, app_data)
-  job_data = get_job_db(id)
+  post_job_db(job_id, app_data)
+  job_data = get_job_db(job_id)
   return render_template('application_submit.html',
                          job_title=job_data['title'])
 
