@@ -30,7 +30,6 @@ def get_job_db(id):
 
 
 def post_job_db(job_id, app_data):
-
   with engine.connect() as conn:
     query = text(
       "INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)"
@@ -45,3 +44,4 @@ def post_job_db(job_id, app_data):
         'work_experience': app_data['work_experience'],
         'resume_url': app_data['resume_url']
       })
+    conn.commit()
