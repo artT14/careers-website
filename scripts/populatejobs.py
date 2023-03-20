@@ -1,7 +1,7 @@
 import sqlite3, json
 
-# proceed = input("Are you sure you want to insert generic data for testing? Y/n: ")
-# if proceed.lower() not in ['y', 'yes']: exit()
+proceed = input("Are you sure you want to insert generic data for testing? Y/n: ")
+if proceed.lower() not in ['y', 'yes']: exit()
 
 con = sqlite3.connect("database/careers.db")
 cur = con.cursor()
